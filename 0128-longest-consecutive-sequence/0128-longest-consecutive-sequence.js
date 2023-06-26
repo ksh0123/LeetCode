@@ -3,17 +3,17 @@
  * @return {number}
  */
 var longestConsecutive = (nums, maxScore = 0) => {
-    const numSet = new Set(nums);         /* Time O(N) | Space O(N) */
+    const numSet = new Set(nums);
 
-    for (const num of [ ...numSet ]) {    /* Time O(N) */
+    for (const num of [ ...numSet ]) {
         const prevNum = num - 1;
 
-        if (numSet.has(prevNum)) continue;/* Time O(N) */
+        if (numSet.has(prevNum)) continue;
 
         let [ currNum, score ] = [ num, 1 ];
 
         const isStreak = () => numSet.has(currNum + 1)
-        while (isStreak()) {              /* Time O(N) */
+        while (isStreak()) { 
             currNum++;
             score++;
         }
