@@ -3,11 +3,8 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
-    let answer = [];
-    let sum = 0;
-    nums.forEach(x => {
-        sum = sum + x;
-        answer.push(sum);
-    })
-    return answer;
+    for (let i = 1; i < nums.length; i++){
+        nums[i] = nums[i-1] + nums[i];
+    }
+    return nums;
 };
