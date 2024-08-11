@@ -7,7 +7,7 @@ var maximumWealth = function(accounts) {
     for(let i = 0; i < accounts.length; i++){
         let total = 0;
         accounts[i].forEach(x => total += x);
-        if (max <= total) max = total;
+        max = Math.max(max, total)
     }
     return max;
 };
