@@ -5,15 +5,17 @@
 var fizzBuzz = function(n) {
     let answer = [];
     for(let i = 0; i < n; i++){
+        let string = '';
         if ((i + 1) % 3 == 0 && (i + 1) % 5 == 0){
-            answer.push("FizzBuzz");
+            string += "FizzBuzz";
         } else if ((i + 1) % 3 == 0){
-            answer.push("Fizz");
+            string += "Fizz";
         } else if ((i + 1) % 5 == 0){
-            answer.push("Buzz");
+            string += "Buzz";
         } else {
-            answer.push(`${i + 1}`);
+            string += i + 1;
         }
+        answer.push(string);
     }
     
     return answer;
